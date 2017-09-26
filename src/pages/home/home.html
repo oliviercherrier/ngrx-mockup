@@ -10,25 +10,42 @@
       <ion-col>
         <ion-card>
           <ion-list>
-            <ion-item class="item" >
+            <ion-item *ngFor="let i of [1,2,3,4,5,6,7,8,9]" class="item" >
 
               <ion-label>
                 <h1>Item 1</h1>
 
-                <p style="margin-top: 20px">Description of the item</p>
+                <p class="item-description" >Description of the item</p>
               </ion-label>
 
-              <button color="danger" ion-button item-end item-top>    
+              <button no-margin no-padding color="danger" ion-button item-end>    
                 <ion-icon name="close"></ion-icon>
               </button>
             </ion-item>
           </ion-list>
         </ion-card>
       </ion-col>
+
       <ion-col>
-        <ion-card>
-          <h1>Create New Item</h1>
-          
+        <ion-card class="new-item">
+          <ion-list>
+            <ion-item>
+              <h1>Create New Item</h1>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked><h3>Item Name</h3></ion-label>
+              <ion-input placeholder="Enter a name" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked><h3>Item Description</h3></ion-label>
+              <ion-input placeholder="Enter a description" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <button ion-button round large color="dark" clear>Cancel</button>
+              <button ion-button round large clear>Save</button>
+            </ion-item>
+          </ion-list>
+
         </ion-card>
       </ion-col>
     </ion-row>
